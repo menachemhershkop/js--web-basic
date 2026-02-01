@@ -4,23 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+        .dark-mode {
+  background-color: black;
+  color: white;
+}
+    </style>
 </head>
 <body>
     <input type="text" id="userColor">
     <button id="applyBtn">שנה צבע!</button>
     <div id="displayBox" style=" width: 300; border-style:dotted; border-color: aqua;">קופסת הפלאים</div>
-
+    <button id="night"> Toggle dark mode</button>
     <script>
         const color = document.getElementById("userColor");
         const apply = document.getElementById("applyBtn");
         const box = document.getElementById("displayBox");
-        
- 
+        const night = document.getElementById("night")
 
-        // apply.addEventListener("input",()=> {
-        //     const newColor = color.value
-        //    box.style.background = newColor
-        // })
+        apply.addEventListener("click",()=> {
+            const newColor = color.value
+           box.style.background = newColor
+        
+        })
+        const dark = document.body
+        dark.classList.toggle("dark-mode")
     </script>
+    
+    
 </body>
 </html>
